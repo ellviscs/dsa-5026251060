@@ -1,4 +1,4 @@
-package CampusPrintingService;
+package lw01.prelab.CampusPrintingService;
 
 public class MonoPrint extends PrintJob {
     public MonoPrint(String id, int pages) {
@@ -7,8 +7,7 @@ public class MonoPrint extends PrintJob {
 
     @Override
     public int calculateCharge() {
-        int page = getPages();
-        return 500 * page;
+        return 500 * getPages();
     }
 
     @Override

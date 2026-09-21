@@ -1,4 +1,6 @@
-import CampusPrintingService.*;
+package lw01.prelab;
+
+import lw01.prelab.CampusPrintingService.*;
 import java.util.*;
 
 public class Main {
@@ -11,16 +13,16 @@ public class Main {
                 String id = sc.next();
                 int pages = sc.nextInt();
                 PrintJob monoPrint = new MonoPrint(id, pages);
-                print.add(monoPrint);
+                printJobs.add(monoPrint);
             } else if (printType.equals("COLOUR")) {
                 String id = sc.next();
                 int pages = sc.nextInt();
                 PrintJob colourPrint = new ColourPrint(id, pages);
-                print.add(colourPrint);
+                printJobs.add(colourPrint);
             }
         }
         sc.close();
-        for (PrintJob job : print) {
+        for (PrintJob job : printJobs) {
             System.out.println(job.summary());
         }
     }
