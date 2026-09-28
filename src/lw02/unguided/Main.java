@@ -41,8 +41,6 @@ public class Main {
             }
         }
 
-        System.out.println(members);
-
         queue = request;
 
         while (!queue.isEmpty()) {
