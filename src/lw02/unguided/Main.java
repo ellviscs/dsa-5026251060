@@ -77,7 +77,7 @@ public class Main {
         }
         System.out.println("\n=== Remaining Book Stock ===");
         for (String[] book : stock) {
-            System.out.println(book[0] + " " + book[1]);
+            System.out.println(book[0] + " : " + book[1]);
         }
         System.out.println("\n=== Failed Requests ===");
         while (!failedRequest.isEmpty()) {
