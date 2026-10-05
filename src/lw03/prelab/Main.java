@@ -42,7 +42,7 @@ public class Main {
             }
             participants.add(name);
         }
-        System.out.println("=== Problem 2 ===");
+        System.out.println("===== Problem 2 =====");
         System.out.println("Unique participants: " + participants.size());
         int i = 1;
         for (String participant: participants) {
@@ -81,7 +81,7 @@ public class Main {
                 }
             }
         }
-        System.out.println("=== Problem 3 ===");
+        System.out.println("===== Problem 3 =====");
         for (String s : inventory.keySet()) {
             System.out.println(s + ": " + inventory.get(s));
         }
