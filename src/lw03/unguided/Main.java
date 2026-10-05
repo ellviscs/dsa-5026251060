@@ -12,21 +12,24 @@ public class Main {
             String type = sc.next();
             String courseCode = sc.next();
 
-            if (type.equals("REGISTER")) {
-                int count = sc.nextInt();
-                if (count <= 0) {
-                    rejected++;
-                    continue;
-                }
-                // Ternary Operator (Diperbolehkan waktu ditanyakan)
-                int courseCount = courses.containsKey(courseCode) ? courses.get(courseCode) : 0;
-                courses.put(courseCode, courseCount + count);
-            } else if (type.equals("CHECK")) {
+            if (type.equals("CHECK")) {
                 String output = courseCode + ": ";
                 output += courses.containsKey(courseCode) ? courses.get(courseCode) + " students" : "Not found";
                 System.out.println(output);
+                continue;
+            }
+
+            int count = sc.nextInt();
+            if (count <= 0) {
+                rejected++;
+                continue;
+            }
+
+            if (type.equals("REGISTER")) {               
+                // Ternary Operator (Diperbolehkan waktu ditanyakan)
+                int courseCount = courses.containsKey(courseCode) ? courses.get(courseCode) : 0;
+                courses.put(courseCode, courseCount + count);
             } else if (type.equals("WITHDRAW")) {
-                int count = sc.nextInt();
                 if (!courses.containsKey(courseCode) || courses.get(courseCode) < count) {
                     rejected++;
                     continue;
