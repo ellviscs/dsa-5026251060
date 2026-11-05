@@ -25,13 +25,14 @@ class Main {
 
         for (int i = 1; i <= 3; i++) {
             int branch = branches[i];
+            int j = i - 1;
             
-            for (int j = i; j > 0; j--) {
-                if (branches[j - 1] < branch) {
-                    branches[j] = branches[j - 1];
-                    branches[j - 1] = branch;
-                }
+            while (j >= 0 && branches[j] < branch){
+                branches[j + 1] = branches[j];
+                j--;
             }
+
+            branches[j + 1] = branch;
         }
 
         for (int branch: branches) {
