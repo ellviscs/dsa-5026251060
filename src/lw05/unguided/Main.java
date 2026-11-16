@@ -217,5 +217,6 @@ public class Main {
         } else {
             System.out.println("The fastest route saves " + (pathTime(path) - pathTime(path2)) + " but needs " + (path2.size() - path.size()) + " more stops.");
         }
+        sc.close();
     }
 }
