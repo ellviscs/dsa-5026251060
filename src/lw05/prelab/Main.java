@@ -112,7 +112,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Write the main method yourself
-        Scanner sc = new Scanner(Main.class.getResourceAsStream("campus2.txt"));
+        Scanner sc = new Scanner(Main.class.getResourceAsStream("campus.txt"));
 
         size = sc.nextInt();
         names = new String[size];        
